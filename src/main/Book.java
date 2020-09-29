@@ -16,9 +16,28 @@ public class Book extends Item{
 		this.author = author;
 	}
 	
-	
-	
-	
+	@Override
+	public String details() {
+		String details;
+		details = "Title : " + this.getTitle() + "   Author: " + this.getAuthor() + "   Page Count: " + this.getPageNumbers() + "   Loan time: " + this.getLoanTime() + "   Checked out: " + this.isCheckedOut();
+		System.out.println(details);
+		return details;
+	}
 
+	public int getPageNumbers() {
+		return pageNumbers;
+	}
+
+	public void setPageNumbers(int pageNumbers) {
+		this.pageNumbers = pageNumbers;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
 
 }

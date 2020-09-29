@@ -16,8 +16,10 @@ public abstract class Item {
 		this.loanTime = loanTime;
 		this.checkedOut = checkedOut;
 	}
-
-
+	
+	public String details() {
+		return title;
+	}
 
 	public String getTitle() {
 		return title;
