@@ -38,7 +38,7 @@ public class Runner {
 		
 		librarySystem.memberDetails(r_Solomon);
 		librarySystem.memberDetails(g_Adams);
-		librarySystem.itemDetails("book");
+		librarySystem.itemDetails(book.getItemID());
 		librarySystem.allItemDetails();
 		
 	
