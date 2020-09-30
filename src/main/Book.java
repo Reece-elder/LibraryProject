@@ -19,7 +19,7 @@ public class Book extends Item{
 	@Override
 	public String details() {
 		String details;
-		details = "Title : " + this.getTitle() + "   Author: " + this.getAuthor() + "   Page Count: " + this.getPageNumbers() + "   Loan time: " + this.getLoanTime() + "   Checked out: " + this.isCheckedOut();
+		details = "Item ID: " + this.getItemID() + "   Title : " + this.getTitle() + "   Author: " + this.getAuthor() + "   Page Count: " + this.getPageNumbers() + "   Loan time: " + this.getLoanTime() + "   Checked out: " + this.isCheckedOut();
 		System.out.println(details);
 		return details;
 	}

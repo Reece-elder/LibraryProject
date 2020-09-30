@@ -30,9 +30,19 @@ public class Runner {
 		librarySystem.addItem(dvd1);
 		librarySystem.addItem(dvd2);
 		
+		librarySystem.removeItem(magazine1.getItemID());
+		
+		librarySystem.registerMember(g_Adams);
+		librarySystem.registerMember(r_Solomon);
+		librarySystem.registerMember(k_Acker);
+		
 		librarySystem.memberDetails(r_Solomon);
+		librarySystem.memberDetails(g_Adams);
 		librarySystem.itemDetails("book");
 		librarySystem.allItemDetails();
+		
+	
+		librarySystem.unregisterMember(k_Acker.getLibraryNumber());
 		
 		
 		

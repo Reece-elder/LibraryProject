@@ -20,7 +20,7 @@ public class DVD extends Item{
 	
 	public String details() {
 		String details;
-		details = "Title : " + this.getTitle() + "   Run Time: " + this.getRunTime() + "   Age Rating: " + this.getAgeRating() + "   Loan time: " + this.getLoanTime() + "   Checked out: " + this.isCheckedOut();
+		details = "Item ID: " + this.getItemID() + "   Title : " + this.getTitle() + "   Run Time: " + this.getRunTime() + "   Age Rating: " + this.getAgeRating() + "   Loan time: " + this.getLoanTime() + "   Checked out: " + this.isCheckedOut();
 		System.out.println(details);
 		return details;
 	}
