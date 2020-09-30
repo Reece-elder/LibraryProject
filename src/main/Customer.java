@@ -15,7 +15,6 @@ public class Customer extends Person {
 	public Customer(String name, int age, Gender gender) {
 		super(name, age, gender);	
 		this.libraryNumber = idNumber;
-		System.out.println(libraryNumber);
 		idNumber += 1;
 		// TODO Auto-generated constructor stub
 	}

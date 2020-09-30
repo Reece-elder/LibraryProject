@@ -3,10 +3,12 @@ package main;
 import java.util.ArrayList;
 
 public class LibrarySystem {
-
+	
+	//ArrayLists used to add and remove items for functionality
 	ArrayList<Item> library = new ArrayList<Item>();
 	ArrayList<Customer> members = new ArrayList<Customer>();
 
+	//Checks if the item is checked out and who checked it out
 	public Boolean checkOut(Item item, Customer customer) {
 		if (!item.isCheckedOut()) {
 			item.setCheckedOut(true);
@@ -19,6 +21,7 @@ public class LibrarySystem {
 		return null;
 	}
 
+	//Checks in an item if it is checked out and takes in who checked it out
 	public Boolean checkIn(Item item, Customer customer) {
 		if (item.isCheckedOut()) {
 			item.setCheckedOut(false);
@@ -31,11 +34,13 @@ public class LibrarySystem {
 		return null;
 	}
 
+	//Adds an item by variable name to the ArrayList
 	public void addItem(Item item) {
 		library.add(item);
 		System.out.println(item.getTitle() + " added to library");
 	}
 
+	//Removes an item from the array list by ID number
 	public void removeItem(int idNumber) {
 		ArrayList<Item> removal = new ArrayList<>();
 
@@ -48,16 +53,18 @@ public class LibrarySystem {
 		this.library.removeAll(removal);
 	}
 
-	public String itemDetails(String item) {
+	//Lists a specific items details
+	public String itemDetails(int idNumber) {
 		String details = "";
 		for (Item i : library) {
-			if (i.getClass().getSimpleName().equalsIgnoreCase(item)) {
+			if (i.getItemID() == idNumber) {
 				details = i.details();
 			}
 		}
 		return details;
 	}
 
+	//Lists details of all items in arraylist
 	public void allItemDetails() {
 
 		for (Item i : library) {
@@ -65,6 +72,7 @@ public class LibrarySystem {
 		}
 	}
 
+	//Lists the details of a member by their name
 	public String memberDetails(Customer person) {
 		String details;
 		details = "Name: " + person.getName() + "   Gender: " + person.getGender() + "   Age: " + person.getAge()
@@ -73,6 +81,7 @@ public class LibrarySystem {
 		return details;
 	}
 
+	//Adds a person to the library Member list
 	public void registerMember(Customer person) {
 		members.add(person);
 		System.out.println(person.getName() + " has been added to the database");
