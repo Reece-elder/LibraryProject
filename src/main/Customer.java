@@ -1,8 +1,11 @@
 package main;
 
+import java.util.UUID;
+
 public class Customer extends Person {
 	
 	private int libraryNumber;
+	private static int idNumber = 1000; 
 
 	public Customer() {
 		super();
@@ -10,9 +13,10 @@ public class Customer extends Person {
 	}
 
 	public Customer(String name, int age, Gender gender) {
-		super(name, age, gender);
-		this.libraryNumber = (int) (Math.random() * (999999 - 100001 + 1) + 100001);
+		super(name, age, gender);	
+		this.libraryNumber = idNumber;
 		System.out.println(libraryNumber);
+		idNumber += 1;
 		// TODO Auto-generated constructor stub
 	}
 

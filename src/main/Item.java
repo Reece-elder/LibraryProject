@@ -4,7 +4,9 @@ public abstract class Item {
 	
 	private String title;
 	private int loanTime;
-	private boolean checkedOut = false; 
+	private boolean checkedOut = false;
+	private int itemID;
+	private static int idNumber = 1; 
 	
 	public Item() {
 		super();
@@ -15,8 +17,18 @@ public abstract class Item {
 		this.title = title;
 		this.loanTime = loanTime;
 		this.checkedOut = checkedOut;
+		this.itemID = idNumber;
+		idNumber += 1;
 	}
 	
+	public int getItemID() {
+		return itemID;
+	}
+
+	public void setItemID(int itemID) {
+		this.itemID = itemID;
+	}
+
 	public String details() {
 		return title;
 	}
